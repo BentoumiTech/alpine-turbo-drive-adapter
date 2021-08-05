@@ -54,7 +54,7 @@ class Bridge {
       window.Alpine.discoverUninitializedComponents(el => {
         window.Alpine.initializeComponent(el);
       });
-      Array.from(document.getElementsByTagName("turbo-frame")).forEach(target => {
+      Array.from(document.getElementsByTagName('turbo-frame')).forEach(target => {
         // Skip if already observed or not lazy turbo-frame
         if (target.getAttribute('data-alpine-frame-observed') || !target.getAttribute('src')) return; // Mark as observed to avoid attaching a new mutation observer every time
 

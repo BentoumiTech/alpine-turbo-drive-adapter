@@ -91,7 +91,7 @@
           window.Alpine.discoverUninitializedComponents(function (el) {
             window.Alpine.initializeComponent(el);
           });
-          Array.from(document.getElementsByTagName("turbo-frame")).forEach(function (target) {
+          Array.from(document.getElementsByTagName('turbo-frame')).forEach(function (target) {
             // Skip if already observed or not lazy turbo-frame
             if (target.getAttribute('data-alpine-frame-observed') || !target.getAttribute('src')) return; // Mark as observed to avoid attaching a new mutation observer every time
 
